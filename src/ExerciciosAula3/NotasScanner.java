@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author FACULDADE
  */
-public class Notas {
+public class NotasScanner {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         
