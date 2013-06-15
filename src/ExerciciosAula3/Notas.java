@@ -14,19 +14,20 @@ public class Notas {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         
-        System.out.printf("Digite a primeira nota:\n");
+        System.out.printf("Digite a primeira nota.:");
         double nota1 = ler.nextDouble();
         
-        System.out.printf("Digite a segunda nota:\n");
+        System.out.printf("Digite a segunda nota.:");
         double nota2 = ler.nextDouble();
         
-        System.out.printf("Digite a terceira nota:\n");
+        System.out.printf("Digite a terceira nota.:");
         double nota3 = ler.nextDouble();
         
-        double media = nota1 + nota2 + nota3 /3;
+        double media = (nota1 + nota2 + nota3) /3;
         
-        String teste = (media >= 6.0)? ":-)":":";
+        String resultado = (media >= 6.0)? ":-)":":-(";
         
+        System.out.printf("Média.:" + media +" " + resultado );
         
     }
     
