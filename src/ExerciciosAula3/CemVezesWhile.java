@@ -15,7 +15,7 @@ public class CemVezesWhile {
          String nome = JOptionPane.showInputDialog("Entre com seu nome");
          
          int i =0;
-         while(i<=100){
+         while(i<100){
              
              System.out.println("Seu nome é.:"+ nome + ".: " + i);
              i++;

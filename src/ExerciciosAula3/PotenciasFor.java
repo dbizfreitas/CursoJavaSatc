@@ -12,14 +12,23 @@ import javax.swing.JOptionPane;
  */
 public class PotenciasFor {
     public static void main(String[] args) {
-         String nome = JOptionPane.showInputDialog("Entre com seu nome");
+         int i =0;
+         int potencia = 1;
          
-         for (int i = 0; i <= 100; i++) {
-            
-           System.out.println("Seu nome é.:"+ nome + ".: " + i);
-         }    
-            
+         int base = Integer.valueOf(JOptionPane.showInputDialog("Digite um numero.:"));
+         int exp = Integer.valueOf(JOptionPane.showInputDialog("Digite um expoente.:"));
          
-       } 
+         
+               
+         for (i = 0; i < exp; i++) {
+              potencia = potencia * base;
+        }
+               
+         
+
+         
+         System.out.println("Resultado.:"+ potencia);
+                              
+    }
     
 }

@@ -18,7 +18,7 @@ public class CemVezesDoWhile {
             System.out.println("Seu nome é.:"+ nome + ".: " + i);
              i++; 
             
-         }while(i<=100);
+         }while(i<100);
        } 
                               
 }

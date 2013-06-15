@@ -12,13 +12,21 @@ import javax.swing.JOptionPane;
  */
 public class PotenciasDoWhile {
     public static void main(String[] args) {
-         String nome = JOptionPane.showInputDialog("Entre com seu nome");
          int i =0;
+         int potencia = 1;
+         
+         int base = Integer.valueOf(JOptionPane.showInputDialog("Digite um numero.:"));
+         int exp = Integer.valueOf(JOptionPane.showInputDialog("Digite um expoente.:"));
+         
+         
+               
          do{
-            System.out.println("Seu nome é.:"+ nome + ".: " + i);
-             i++; 
-            
-         }while(i<=100);
-       } 
+                   
+             potencia = potencia * base;
+             i++;
+         }while(i < exp);
+         
+         System.out.println("Resultado.:"+ potencia);
     
+    }
 }
