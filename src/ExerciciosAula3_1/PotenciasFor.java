@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ExerciciosAula3;
+package ExerciciosAula3_1;
 
 import javax.swing.JOptionPane;
 
@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author FACULDADE
  */
-public class PotenciasWhile {
+public class PotenciasFor {
     public static void main(String[] args) {
          int i =0;
          int potencia = 1;
@@ -20,10 +20,13 @@ public class PotenciasWhile {
          
          
                
-         while(i++ < exp){
-                    
-             potencia = potencia * base;
-         }
+         for (i = 0; i < exp; i++) {
+              potencia = potencia * base;
+        }
+               
+         
+
+         
          System.out.println("Resultado.:"+ potencia);
                               
     }

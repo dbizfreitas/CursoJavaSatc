@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ExerciciosAula3;
+package ExerciciosAula3_1;
 
 import javax.swing.JOptionPane;
 
@@ -10,14 +10,17 @@ import javax.swing.JOptionPane;
  *
  * @author FACULDADE
  */
-public class CemVezesFor {
+public class CemVezesDoWhile {
     public static void main(String[] args) {
          String nome = JOptionPane.showInputDialog("Entre com seu nome");
-         
-         for (int i = 0; i < 100; i++) {
+         int i =0;
+         do{
+            System.out.println("Seu nome é.:"+ nome + ".: " + i);
+             i++; 
             
-           System.out.println("Seu nome é.:"+ nome + ".: " + i);
-         }    
-   } 
-    
+         }while(i<100);
+       } 
+                              
 }
+    
+
