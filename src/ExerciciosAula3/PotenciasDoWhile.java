@@ -10,17 +10,15 @@ import javax.swing.JOptionPane;
  *
  * @author FACULDADE
  */
-public class CemVezesWhile {
+public class PotenciasDoWhile {
     public static void main(String[] args) {
          String nome = JOptionPane.showInputDialog("Entre com seu nome");
-         
          int i =0;
-         while(i<=100){
-             
-             System.out.println("Seu nome é.:"+ nome + ".: " + i);
-             i++;
+         do{
+            System.out.println("Seu nome é.:"+ nome + ".: " + i);
+             i++; 
+            
+         }while(i<=100);
        } 
-                              
-    }
     
 }

@@ -10,17 +10,16 @@ import javax.swing.JOptionPane;
  *
  * @author FACULDADE
  */
-public class CemVezesWhile {
+public class CemVezesFor {
     public static void main(String[] args) {
          String nome = JOptionPane.showInputDialog("Entre com seu nome");
          
-         int i =0;
-         while(i<=100){
-             
-             System.out.println("Seu nome é.:"+ nome + ".: " + i);
-             i++;
+         for (int i = 0; i <= 100; i++) {
+            
+           System.out.println("Seu nome é.:"+ nome + ".: " + i);
+         }    
+            
+         
        } 
-                              
-    }
     
 }
