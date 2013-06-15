@@ -16,9 +16,11 @@ public class Agenda {
             {"Becca","735-1234","Manila"}};
         
         for (int i = 0; i < entry.length; i++) {
-            for (int j = 0; j < entry.length; j++) {
-                System.out.println(entry[i][j]); 
-            }
+
+                System.out.println("Nome.: " + entry[i][0]); 
+                System.out.println("Tel.: " + entry[i][1]); 
+                System.out.println("Address.:" +entry[i][2]+"\n"); 
+
         }
     }
 }
