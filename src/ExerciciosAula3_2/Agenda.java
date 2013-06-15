@@ -10,7 +10,7 @@ package ExerciciosAula3_2;
  */
 public class Agenda {
     public static void main(String[] args) {
-        String entry[][][] = {
+        String entry[][]= {
             {"Florence","735-1234","Manila"},
             {"Joyce","735-1234","Manila"},
             {"Becca","735-1234","Manila"}};
