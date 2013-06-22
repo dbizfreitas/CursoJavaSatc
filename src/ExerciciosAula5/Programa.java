@@ -24,6 +24,7 @@ public class Programa {
         f2.salario = Double.parseDouble(JOptionPane.showInputDialog("Entre com Salario.:"));
         f2.recebeAumento(Double.parseDouble(JOptionPane.showInputDialog("Entre com almento.:")));
         
+        //Funcionario f2 = f1;
         
         if (f1 == f2){
             System.out.println("iguais");
@@ -31,8 +32,11 @@ public class Programa {
             System.out.println("diferentes");
         }
         
+       
+        
         
         f1.mostra();
+        f2.mostra();
         
     }
     

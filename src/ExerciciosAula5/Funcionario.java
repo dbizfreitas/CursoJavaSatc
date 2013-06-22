@@ -12,8 +12,10 @@ public class Funcionario {
     String nome;
     String departamento;
     Double salario;
-    String data;
+    //String data;
     String RG;
+    
+    Data dataDeEntrada;
     
     void recebeAumento(double aumento){
       salario+=aumento;  
@@ -28,7 +30,10 @@ public class Funcionario {
         System.out.println("Nome.: " + nome);
         System.out.println("Salario.: " + salario);
         calculaGanhoAnual();
+        
     }
+    
+    
     
 }
 
