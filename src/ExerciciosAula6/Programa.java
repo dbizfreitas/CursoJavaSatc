@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ExerciciosAula5;
+package ExerciciosAula6;
 
 /**
  *
@@ -34,11 +34,33 @@ public class Programa {
         
         carlos.mostra();
         
+        System.out.println("---------EMPRESA------------"); 
+        
+        Empresa empresa = new Empresa();
+        empresa.funcionarios = new Funcionario[10];
+        
+                
+        Funcionario marlon = new Funcionario();
+        marlon.nome = "Marlon";
+        marlon.salario = 100.0;
+        
+        Funcionario fabio = new Funcionario();
+        fabio.nome = "Fabio";
+        fabio.salario = 520.0;
+              
+        empresa.adiciona(fabio);
+        empresa.adiciona(marlon);
+        
+        empresa.mostra();
+        
         System.out.println("---------------------"); 
         
         carlos.recebeAumento(200.0);
         
         carlos.mostra();
+        
+        
+        
     }
     
 }
