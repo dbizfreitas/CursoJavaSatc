@@ -12,32 +12,35 @@ import javax.swing.JOptionPane;
  */
 public class Programa {
     public static void main (String[]args){
-        Funcionario f1 = new Funcionario();
-               
-        f1.nome = JOptionPane.showInputDialog("Entre com nome do Funcionario.:");
-        f1.salario = Double.parseDouble(JOptionPane.showInputDialog("Entre com Salario.:"));
-        f1.recebeAumento(Double.parseDouble(JOptionPane.showInputDialog("Entre com almento.:")));
-                     
-        Funcionario f2 = new Funcionario();
-               
-        f2.nome = JOptionPane.showInputDialog("Entre com nome do Funcionario.:");
-        f2.salario = Double.parseDouble(JOptionPane.showInputDialog("Entre com Salario.:"));
-        f2.recebeAumento(Double.parseDouble(JOptionPane.showInputDialog("Entre com almento.:")));
+        Funcionario carlos = new Funcionario();
         
-        //Funcionario f2 = f1;
-        
-        if (f1 == f2){
-            System.out.println("iguais");
-        }else{
-            System.out.println("diferentes");
-        }
-        
+        carlos.nome = "Carlos";
+        carlos.salario = 1000.0;
+        carlos.rg = "22339992-0";
        
+        Departamento departamento = new Departamento();
         
+        departamento.nome = "A";
+        departamento.percentualInsalubridade = 10.0;
+        departamento.valorBonus = 100.0;
         
-        f1.mostra();
-        f2.mostra();
+        carlos.departamento = departamento;
         
+        Data dataEntrada = new Data();
+        
+        dataEntrada.dia = 12;
+        dataEntrada.mes = 6;
+        dataEntrada.ano = 2013;
+        
+        carlos.dataEntrada = dataEntrada;
+        
+        carlos.mostra();
+        
+        System.out.println("---------------------"); 
+        
+        carlos.recebeAumento(200.0);
+        
+        carlos.mostra();
     }
     
 }

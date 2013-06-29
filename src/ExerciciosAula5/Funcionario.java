@@ -10,30 +10,42 @@ package ExerciciosAula5;
  */
 public class Funcionario {
     String nome;
-    String departamento;
+    Departamento departamento;
     Double salario;
-    //String data;
-    String RG;
+    Data dataEntrada;
+    String rg;
     
-    Data dataDeEntrada;
-    
-    void recebeAumento(double aumento){
-      salario+=aumento;  
+    void recebeAumento(Double valor){
+        salario += valor;
     }
-    
-    double calculaGanhoAnual(){
-     salario = salario *12 ;
-     return salario;
-    }
-    
-    void mostra(){
-        System.out.println("Nome.: " + nome);
-        System.out.println("Salario.: " + salario);
-        calculaGanhoAnual();
-        
-    }
-    
-    
-    
-}
 
+    Double calculaSalarioMensal(){
+        return departamento.aplicaValorInsalubridade(salario);
+    }        
+    
+    Double calculaGanhoAnual(){
+        Double ferias = 0.;
+
+    Double decimo13 = 0.;
+    Double ganhoAnual = salario * 12 + ferias + decimo13;
+    
+    return ganhoAnual;
+    }            
+    
+    public void mostra(){
+    StringBuilder sb = new StringBuilder();
+    
+    sb.append("Nome: ").append(nome).append("\n");
+    sb.append("Departamento: ").append(departamento).append("\n");
+    sb.append("Salário: ").append(calculaSalarioMensal()).append("\n");
+
+//        sb.append("Data Entrada (dia): ").append(dataEntrada.dia).append("\n");
+//        sb.append("Data Entrada (mês): ").append(dataEntrada.mes).append("\n");
+//        sb.append("Data Entrada (ano): ").append(dataEntrada.ano).append("\n");
+
+    sb.append("Data Entrada formatada: ").append(dataEntrada.formatada()).append("\n");
+    sb.append("RG: ").append(rg).append("\n");
+    
+    System.out.println(sb.toString());
+    }
+}
