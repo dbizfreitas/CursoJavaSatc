@@ -11,10 +11,12 @@ package ExerciciosAula6;
 public class Funcionario {
     String nome;
     Departamento departamento;
-    Double salario;
+    private  Double salario;
     Data dataEntrada;
     String rg;
-    
+
+        
+   
     void recebeAumento(Double valor){
         salario += valor;
     }
