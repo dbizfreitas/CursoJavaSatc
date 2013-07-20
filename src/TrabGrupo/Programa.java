@@ -20,10 +20,15 @@ public class Programa {
         Filme filme = new Filme("Batimam");
         Filme filme1 = new Filme("Supermam");
         Filme filme2 = new Filme("Homem aranha");
+        TipoMidia tipoMidia = new TipoMidia("VHS",2.50);
+        TipoMidia tipoMidia1 = new TipoMidia("DVD",3.50);
+        TipoMidia tipoMidia2 = new TipoMidia("VHS",2.50);
+        Categoria categoria = new Categoria("Lançamento",1.25);
         
-	Iten iten = new Iten(111111111,"VHS",2.50,filme);
-        Iten iten1 = new Iten(22222222,"DVD",3.50,filme1);
-	Iten iten2 = new Iten(33333333,"VHS",2.50,filme2);
+        
+	Iten iten = new Iten(111111111,tipoMidia,filme);
+        Iten iten1 = new Iten(22222222,tipoMidia1,filme1);
+	Iten iten2 = new Iten(33333333,tipoMidia2,filme2);
 		
 	Locacao locacao = new Locacao();
 	locacao.setCliente(cliente);
@@ -41,9 +46,13 @@ public class Programa {
         Filme filme3 = new Filme("Cavalo de Guerra");
         Filme filme4 = new Filme("Titanic");
         Filme filme5 = new Filme("Hooligans");
-	Iten iten3 = new Iten(111111111,"VHS",2.50,filme3);
-	Iten iten4 = new Iten(22222222,"DVD",3.50,filme4);
-	Iten iten5 = new Iten(33333333,"VHS",2.50,filme5);
+        TipoMidia tipoMidia3 = new TipoMidia("VHS",2.50);
+        TipoMidia tipoMidia4 = new TipoMidia("DVD",3.50);
+        TipoMidia tipoMidia5 = new TipoMidia("VHS",2.50);
+        
+	Iten iten3 = new Iten(111111111,tipoMidia3,filme3);
+	Iten iten4 = new Iten(22222222,tipoMidia4,filme4);
+	Iten iten5 = new Iten(33333333,tipoMidia5,filme5);
 	
 	Locacao locacao1 = new Locacao();	
 	locacao1.setCliente(cliente1);

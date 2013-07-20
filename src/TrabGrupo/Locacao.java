@@ -49,7 +49,7 @@ public class Locacao {
         System.out.println("Cliente[" + getContador() + "]:" + cliente.getNome());
         while (iten[i] != null) {
             //o cliente.getnome é para identificar quais filmes sao de quais clientes
-            System.out.println("Titulo.: "+ iten[i].getFilme().getNome() + " Valor.: " + iten[i].getValor());
+            System.out.println("Titulo.: "+ iten[i].getFilme().getNome() + " Valor.:"  + iten[i].geTipoMidia().getValor());
             i++;
         }
     }

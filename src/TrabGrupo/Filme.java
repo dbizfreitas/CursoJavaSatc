@@ -19,22 +19,6 @@ public class Filme {
         
     }
 
-    
-
-//    void setValor() {
-//
-//        Double porcentagem = 1.0;
-//
-//        if (getCategoria().equals("Lançamento")) {
-//            porcentagem = 1.25;
-//        } else {
-//            if (getCategoria().equals("Super lançamento")) {
-//                porcentagem = 1.50;
-//            }
-//        }
-//
-//       
-//    }
 
     String getNome() {
         return nome;

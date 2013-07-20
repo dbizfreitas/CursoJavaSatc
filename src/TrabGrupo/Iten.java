@@ -9,22 +9,21 @@ package TrabGrupo;
  * @author FACULDADE
  */
 public class Iten {
+
     int codBarras;
-    String Midia;
-    Double valor;
-    private Filme filme; 
-    
-    Iten(int codBarras, String midia,Double valor, Filme filme) {
-        setCodBarras(codBarras);
-        setMidia(midia);
-        this.valor = valor;
+    private Filme filme;
+    private TipoMidia tipoMidia;
+
+    Iten(int codBarras, TipoMidia tipoMidia, Filme filme) {
+        this.codBarras = codBarras;
         this.filme = filme;
+        this.tipoMidia = tipoMidia;
     }
 
-    
-       
-      
-    
+    public TipoMidia geTipoMidia() {
+        return tipoMidia;
+    }
+
     public int getCodBarras() {
         return codBarras;
     }
@@ -33,29 +32,7 @@ public class Iten {
         this.codBarras = codBarras;
     }
 
-    public String getMidia() {
-        return Midia;
-    }
-
-    private void setMidia(String Midia) {
-        this.Midia = Midia;
-    }
-    
-    Double getValor(){
-        return valor;
-    }
-
     public Filme getFilme() {
         return filme;
-    }
-     
-    void setValor() {
-        Double porcentagem = 1.0;
-
-         if (getMidia().equals("VHS") || getMidia().equals("DVD")) {
-            this.valor = (2.5 * porcentagem);
-        } else {
-            this.valor = (3.5 * porcentagem);
-        }
     }
 }
