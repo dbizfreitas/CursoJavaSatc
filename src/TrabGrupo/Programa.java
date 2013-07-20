@@ -17,15 +17,19 @@ public class Programa {
 	 * */	
 		
 	Cliente cliente = new Cliente("Osmani");
-	Filme filme = new Filme("A volta do que não foram","VHS", "Catalogo");
-	Filme filme1 = new Filme("A longas tranças de um careca", "DVD","Lançamento");
-	Filme filme2 = new Filme("De volta a ilha azul", "BlueRay", "Super lançamento");
+        Filme filme = new Filme("Batimam");
+        Filme filme1 = new Filme("Supermam");
+        Filme filme2 = new Filme("Homem aranha");
+        
+	Iten iten = new Iten(111111111,"VHS",2.50,filme);
+        Iten iten1 = new Iten(22222222,"DVD",3.50,filme1);
+	Iten iten2 = new Iten(33333333,"VHS",2.50,filme2);
 		
 	Locacao locacao = new Locacao();
 	locacao.setCliente(cliente);
-	locacao.adicionaFilme(filme);
-	locacao.adicionaFilme(filme1);
-	locacao.adicionaFilme(filme2);
+	locacao.adicionaIten(iten);
+	locacao.adicionaIten(iten1);
+	locacao.adicionaIten(iten2);
 	locacao.mostraLocacao();
         
 	//locacao.mostraQuantidLocacoes();
@@ -34,15 +38,18 @@ public class Programa {
 	System.out.println(" ");
 	
 	Cliente cliente1 = new Cliente("José");
-	Filme filme3 = new Filme("Batman", "VHS","Catalogo");
-	Filme filme4 = new Filme("SuperMan", "DVD","Lançamento");
-	Filme filme5 = new Filme("Home aranha","BlueRay","Super lançamento" );
+        Filme filme3 = new Filme("Cavalo de Guerra");
+        Filme filme4 = new Filme("Titanic");
+        Filme filme5 = new Filme("Hooligans");
+	Iten iten3 = new Iten(111111111,"VHS",2.50,filme3);
+	Iten iten4 = new Iten(22222222,"DVD",3.50,filme4);
+	Iten iten5 = new Iten(33333333,"VHS",2.50,filme5);
 	
 	Locacao locacao1 = new Locacao();	
 	locacao1.setCliente(cliente1);
-	locacao1.adicionaFilme(filme3);
-	locacao1.adicionaFilme(filme4);
-	locacao1.adicionaFilme(filme5);
+	locacao1.adicionaIten(iten3);
+	locacao1.adicionaIten(iten4);
+	locacao1.adicionaIten(iten5);
 	locacao1.mostraLocacao();
 	//locacao1.mostraQuantidLocacoes();
 	}

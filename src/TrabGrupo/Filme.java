@@ -11,54 +11,30 @@ package TrabGrupo;
 public class Filme {
 
     String nome;
-    Double valor;
-    String midia;
-    String categoria;
+    
+    
 
-    Filme(String nome, String midia, String categoria) {
-        setNome(nome);
-        setMidia(midia);
-        setCategoria(categoria);
-        setValor();
+    Filme(String nome) {
+        this.setNome(nome);
+        
     }
 
-    private String getCategoria() {
-        return categoria;
-    }
+    
 
-    private void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    String getMidia() {
-        return midia;
-    }
-
-    void setMidia(String midia) {
-        this.midia = midia;
-    }
-
-    Double getValor() {
-        return valor;
-    }
-
-    void setValor() {
-        Double porcentagem = 1.0;
-
-        if (getCategoria().equals("Lançamento")) {
-            porcentagem = 1.25;
-        } else {
-            if (getCategoria().equals("Super lançamento")) {
-                porcentagem = 1.50;
-            }
-        }
-
-        if (getMidia().equals("VHS") || getMidia().equals("DVD")) {
-            this.valor = (2.5 * porcentagem);
-        } else {
-            this.valor = (3.5 * porcentagem);
-        }
-    }
+//    void setValor() {
+//
+//        Double porcentagem = 1.0;
+//
+//        if (getCategoria().equals("Lançamento")) {
+//            porcentagem = 1.25;
+//        } else {
+//            if (getCategoria().equals("Super lançamento")) {
+//                porcentagem = 1.50;
+//            }
+//        }
+//
+//       
+//    }
 
     String getNome() {
         return nome;

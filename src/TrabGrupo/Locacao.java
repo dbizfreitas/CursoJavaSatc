@@ -14,7 +14,8 @@ public class Locacao {
     static Integer contador = 0;
     Cliente cliente = new Cliente();
     Filme[] filme = new Filme[5];
-
+    Iten[] iten = new Iten[5];
+ 
     Locacao() {
         contador++;
     }
@@ -23,32 +24,32 @@ public class Locacao {
         this.cliente = cliente;
     }
 
-    private int buscaPosicaoVazia(Filme[] filmes) {
+    private int buscaPosicaoVazia(Iten[] iten) {
         int i = 0;
-        while (filmes[i] != null) {
+        while (iten[i] != null) {
             i++;
         }
         return i;
     }
 
-    private Filme[] getFilmes() {
-        return filme;
+    private Iten[] getIten() {
+        return iten;
     }
 
-    private void setFilmes(int posicao, Filme filmes) {
-        filme[posicao] = filmes;
+    private void setIten(int posicao, Iten iten) {
+        this.iten[posicao] = iten ;
     }
 
-    public void adicionaFilme(Filme filmes) {//convensão em singular
-        setFilmes(buscaPosicaoVazia(getFilmes()), filmes);
+    public void adicionaIten(Iten iten) {//convensão em singular
+        setIten(buscaPosicaoVazia(getIten()), iten);
     }
 
     void mostraLocacao() {
         int i = 0;
         System.out.println("Cliente[" + getContador() + "]:" + cliente.getNome());
-        while (filme[i] != null) {
+        while (iten[i] != null) {
             //o cliente.getnome é para identificar quais filmes sao de quais clientes
-            System.out.println("Funcionarios[" + cliente.getNome() + "]:" + filme[i].getNome() + "- Valor:" + filme[i].getValor());
+            System.out.println("Titulo.: "+ iten[i].getFilme().getNome() + " Valor.: " + iten[i].getValor());
             i++;
         }
     }
