@@ -17,31 +17,32 @@ public class Programa {
 	 * */	
 		
 	Cliente cliente = new Cliente("Osmani");
-	Filmes filmes = new Filmes("A volta do que não foram","VHS", "Catalogo");
-	Filmes filmes1 = new Filmes("A longas tranças de um careca", "DVD","Lançamento");
-	Filmes filmes2 = new Filmes("De volta a ilha azul", "BlueRay", "Super lançamento");
+	Filme filme = new Filme("A volta do que não foram","VHS", "Catalogo");
+	Filme filme1 = new Filme("A longas tranças de um careca", "DVD","Lançamento");
+	Filme filme2 = new Filme("De volta a ilha azul", "BlueRay", "Super lançamento");
 		
 	Locacao locacao = new Locacao();
 	locacao.setCliente(cliente);
-	locacao.adicionaFilmes(filmes);
-	locacao.adicionaFilmes(filmes1);
-	locacao.adicionaFilmes(filmes2);
+	locacao.adicionaFilme(filme);
+	locacao.adicionaFilme(filme1);
+	locacao.adicionaFilme(filme2);
 	locacao.mostraLocacao();
+        
 	//locacao.mostraQuantidLocacoes();
 	
 	//para dar um espaço entre as locações
 	System.out.println(" ");
 	
 	Cliente cliente1 = new Cliente("José");
-	Filmes filmes3 = new Filmes("Batman", "VHS","Catalogo");
-	Filmes filmes4 = new Filmes("SuperMan", "DVD","Lançamento");
-	Filmes filmes5 = new Filmes("Home aranha","BlueRay","Super lançamento" );
+	Filme filme3 = new Filme("Batman", "VHS","Catalogo");
+	Filme filme4 = new Filme("SuperMan", "DVD","Lançamento");
+	Filme filme5 = new Filme("Home aranha","BlueRay","Super lançamento" );
 	
 	Locacao locacao1 = new Locacao();	
 	locacao1.setCliente(cliente1);
-	locacao1.adicionaFilmes(filmes3);
-	locacao1.adicionaFilmes(filmes4);
-	locacao1.adicionaFilmes(filmes5);
+	locacao1.adicionaFilme(filme3);
+	locacao1.adicionaFilme(filme4);
+	locacao1.adicionaFilme(filme5);
 	locacao1.mostraLocacao();
 	//locacao1.mostraQuantidLocacoes();
 	}

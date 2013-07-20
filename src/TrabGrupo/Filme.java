@@ -8,14 +8,14 @@ package TrabGrupo;
  *
  * @author FACULDADE
  */
-public class Filmes {
+public class Filme {
 
     String nome;
     Double valor;
     String midia;
     String categoria;
 
-    Filmes(String nome, String midia, String categoria) {
+    Filme(String nome, String midia, String categoria) {
         setNome(nome);
         setMidia(midia);
         setCategoria(categoria);

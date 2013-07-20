@@ -13,7 +13,7 @@ public class Locacao {
     StringBuilder strBuilder;
     static Integer contador = 0;
     Cliente cliente = new Cliente();
-    Filmes[] filme = new Filmes[5];
+    Filme[] filme = new Filme[5];
 
     Locacao() {
         contador++;
@@ -23,7 +23,7 @@ public class Locacao {
         this.cliente = cliente;
     }
 
-    private int buscaPosicaoVazia(Filmes[] filmes) {
+    private int buscaPosicaoVazia(Filme[] filmes) {
         int i = 0;
         while (filmes[i] != null) {
             i++;
@@ -31,15 +31,15 @@ public class Locacao {
         return i;
     }
 
-    private Filmes[] getFilmes() {
+    private Filme[] getFilmes() {
         return filme;
     }
 
-    private void setFilmes(int posicao, Filmes filmes) {
+    private void setFilmes(int posicao, Filme filmes) {
         filme[posicao] = filmes;
     }
 
-    public void adicionaFilmes(Filmes filmes) {//convensão em singular
+    public void adicionaFilme(Filme filmes) {//convensão em singular
         setFilmes(buscaPosicaoVazia(getFilmes()), filmes);
     }
 
