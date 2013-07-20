@@ -1,73 +1,70 @@
-
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package TrabGrupo;
 
+/**
+ *
+ * @author FACULDADE
+ */
 public class Filmes {
-    private String midia;
-    private String genero;
-    private String categorias;
-    private String titulo;
-    private Integer codBarras;
-    private double valor;
-    
 
-        
-    public String getCategorias() {
-        return categorias;
+    String nome;
+    Double valor;
+    String midia;
+    String categoria;
+
+    Filmes(String nome, String midia, String categoria) {
+        setNome(nome);
+        setMidia(midia);
+        setCategoria(categoria);
+        setValor();
     }
 
-    public void setCategorias(String categorias) {
-        if (categorias.equals("1")){
-            categorias="1";
-        } else if (categorias.equals("2")){
-            categorias="2";
-        } else if (categorias.equals("3")){
-            categorias="3";
-        } else categorias="1";
-        this.categorias = categorias;
+    private String getCategoria() {
+        return categoria;
     }
 
-    public Integer getCodBarras() {
-        return codBarras;
+    private void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public void setCodBarras(Integer codBarras) {
-        this.codBarras = codBarras;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String getMidia() {
+    String getMidia() {
         return midia;
     }
 
-    public void setMidia(String midia) {
-          if(!midia.equals("1")|| !midia.equals(2)){
-              midia = "1";
-          }
-          this.midia = midia;
+    void setMidia(String midia) {
+        this.midia = midia;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public double getValor() {
+    Double getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    void setValor() {
+        Double porcentagem = 1.0;
+
+        if (getCategoria().equals("Lançamento")) {
+            porcentagem = 1.25;
+        } else {
+            if (getCategoria().equals("Super lançamento")) {
+                porcentagem = 1.50;
+            }
+        }
+
+        if (getMidia().equals("VHS") || getMidia().equals("DVD")) {
+            this.valor = (2.5 * porcentagem);
+        } else {
+            this.valor = (3.5 * porcentagem);
+        }
     }
 
-    
+    String getNome() {
+        return nome;
+    }
+
+    void setNome(String nome) {
+        this.nome = nome;
+    }
 }

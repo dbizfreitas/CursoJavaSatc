@@ -1,53 +1,29 @@
-
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package TrabGrupo;
 
-
+/**
+ *
+ * @author FACULDADE
+ */
 public class Cliente {
-    private String nome;
-    private String endereco;
-    private String cpf;
-    private String rg;
-    private String telefone;
+    String nome;
 
-    //filme
+public Cliente(){
+}
+
+public Cliente(String nome){
+	setNome(nome);
+}
+
+String getNome() {
+	return nome;
+}
+
+void setNome(String nome) {
+	this.nome = nome;
+}
     
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
 }
