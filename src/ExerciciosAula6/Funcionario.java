@@ -11,7 +11,7 @@ package ExerciciosAula6;
 public class Funcionario {
     String nome;
     Departamento departamento;
-    private  Double salario;
+    Double salario;
     Data dataEntrada;
     String rg;
 
