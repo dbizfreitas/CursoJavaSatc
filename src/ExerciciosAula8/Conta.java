@@ -10,6 +10,7 @@ package ExerciciosAula8;
  */
 public class Conta {
     protected double saldo;
+    protected int numero;
 
     public double getSaldo() {
         return saldo;
